@@ -1,0 +1,384 @@
+{
+  "languages": {
+    "en": "Inglizcha",
+    "ru": "Ruscha",
+    "uz": "O'zbekcha"
+  },
+  "app": {
+    "title": "Student Monitor",
+    "subtitle": "Admin panel",
+    "mainMenu": "Asosiy menyu",
+    "home": "Bosh sahifa",
+    "safeMode": "Xavfsiz rejim"
+  },
+  "common": {
+    "search": "Qidirish",
+    "filter": "Filter",
+    "save": "Saqlash",
+    "cancel": "Bekor qilish",
+    "delete": "O'chirish",
+    "edit": "Tahrirlash",
+    "add": "Qo'shish",
+    "close": "Yopish",
+    "loading": "Yuklanmoqda...",
+    "reset": "Tozalash",
+    "submit": "Yuborish",
+    "export": "Eksport",
+    "view": "Ko'rish",
+    "logout": "Chiqish",
+    "complete": "To'liq",
+    "confirm": "Tasdiqlash",
+    "previous": "Oldingi",
+    "next": "Keyingi",
+    "all": "Barchasi",
+    "yes": "Ha",
+    "no": "Yo'q",
+    "none": "Yo'q",
+    "active": "Faol"
+  },
+  "status": {
+    "active": "Faol",
+    "inactive": "Nofaol",
+    "graduated": "Bitirgan",
+    "warning": "Ogohlantirish",
+    "suspended": "To'xtatilgan",
+    "pending": "Kutilmoqda",
+    "available": "Mavjud",
+    "busy": "Band",
+    "delivered": "Yetkazilgan",
+    "shipped": "Jo'natilgan"
+  },
+  "roles": {
+    "tutor": "Tutor",
+    "vice_dean": "Dekan o'rinbosari",
+    "dean": "Dekan",
+    "admin": "Admin"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "groups": "Guruhlar",
+    "groupList": "Guruhlar ro'yxati",
+    "studentList": "Talabalar ro'yxati",
+    "studentProfiles": "Talaba profillari",
+    "searchFilter": "Qidirish va filter",
+    "pdfExport": "PDF eksport",
+    "tutorManagement": "Tutor boshqaruvi",
+    "deanSettings": "Dekan sozlamalari",
+    "auditLogs": "Audit jurnali",
+    "uiComponents": "UI komponentlar demo"
+  },
+  "auth": {
+    "login": "Kirish",
+    "description": "Admin panelga kirish uchun ma'lumotlaringizni kiriting",
+    "demoAccounts": "Demo akkauntlar",
+    "email": "Email",
+    "emailPlaceholder": "admin@university.edu",
+    "password": "Parol",
+    "passwordPlaceholder": "demo12345",
+    "rememberMe": "Eslab qolish",
+    "signingIn": "Kirilmoqda...",
+    "accounts": {
+      "dean": "Dekan demo",
+      "admin": "Admin demo",
+      "tutor": "Tutor demo"
+    }
+  },
+  "dashboard": {
+    "welcomeBack": "Xush kelibsiz",
+    "admin": "Admin",
+    "monthlyEarnings": "Oylik daromad",
+    "lastMonthGrowth": "O'tgan oy {{value}}",
+    "salesOverview": "Savdo ko'rinishi",
+    "lastMonths": "So'nggi {{count}} oy",
+    "previousMonth": "Oldingi oy",
+    "currentMonth": "Joriy oy",
+    "totalOrders": "Jami buyurtmalar",
+    "searchOrders": "Buyurtmani qidiring...",
+    "stats": {
+      "productsSold": { "title": "Sotilgan mahsulotlar", "subtitle": "Sotilgan birliklar soni" },
+      "totalSales": { "title": "Jami savdo", "subtitle": "Umumiy tushum" },
+      "monthlySales": { "title": "Oylik savdo", "subtitle": "Oy davomida yaratilgan savdo" },
+      "totalCustomers": { "title": "Jami mijozlar", "subtitle": "Jalb qilingan mijozlar" }
+    },
+    "table": {
+      "id": "Id",
+      "product": "Mahsulot",
+      "customer": "Mijoz",
+      "quantity": "Soni",
+      "status": "Holat",
+      "price": "Narx",
+      "action": "Amal"
+    }
+  },
+  "students": {
+    "title": "Talabalar",
+    "subtitle": "Talaba profillarini preview uchun tayyor mock data bilan boshqaring",
+    "addStudent": "Talaba qo'shish",
+    "visibleStudents": "Ko'rinayotgan talabalar",
+    "highCompletion": "85% dan yuqori to'ldirish",
+    "quickNote": "Qisqa izoh",
+    "quickNoteText": "Demo yozuvlarda telefon, shahar, guruh, tutor va stipendiya maydonlari bor, shuning uchun detail oynasi to'liq ko'rinadi.",
+    "listTitle": "Talabalar ro'yxati",
+    "listDescription": "API ulashdan oldin mock yozuvlarni qidiring va ko'ring",
+    "searchPlaceholder": "Ism, HEMIS ID yoki guruh bo'yicha qidiring...",
+    "openFullProfile": "To'liq profilni ochish",
+    "table": {
+      "name": "Ism",
+      "hemisId": "HEMIS ID",
+      "group": "Guruh",
+      "completion": "To'ldirish",
+      "status": "Holat",
+      "actions": "Amallar"
+    },
+    "modal": {
+      "email": "Email",
+      "tutor": "Tutor",
+      "phone": "Telefon",
+      "city": "Shahar",
+      "scholarship": "Stipendiya",
+      "lastUpdate": "So'nggi yangilanish"
+    }
+  },
+  "groups": {
+    "title": "Guruhlar",
+    "subtitle": "Talaba guruhlari, dars jadvali va izohlarni boshqaring",
+    "addGroup": "Guruh qo'shish",
+    "activeGroups": "Faol guruhlar",
+    "highestCompletion": "Eng yuqori to'ldirish",
+    "previewMode": "Preview rejimi",
+    "previewModeText": "Har bir karta xona, jadval, tutor va kurator izohi bilan modal oynani ochadi.",
+    "viewDetails": "Batafsil ko'rish",
+    "card": {
+      "program": "Yo'nalish",
+      "year": "Kurs",
+      "students": "Talabalar",
+      "profileCompletion": "Profil to'ldirish"
+    },
+    "modal": {
+      "tutor": "Tutor",
+      "room": "Xona",
+      "schedule": "Jadval",
+      "curatorNote": "Kurator izohi"
+    }
+  },
+  "tutors": {
+    "title": "Tutorlar",
+    "subtitle": "Tutor birikmalari, xonalar va guruh qamrovini boshqaring",
+    "addTutor": "Tutor qo'shish",
+    "visibleTutors": "Ko'rinayotgan tutorlar",
+    "coveredStudents": "Qamrab olingan talabalar",
+    "demoExtras": "Demo qo'shimchalar",
+    "demoExtrasText": "Modal oynalarda xona, telefon, email va status ko'rsatiladi.",
+    "assignedGroups": "Biriktirilgan guruhlar",
+    "totalStudents": "Jami talabalar",
+    "completion": "To'ldirish",
+    "previewTutor": "Tutor preview",
+    "modal": {
+      "email": "Email",
+      "phone": "Telefon",
+      "office": "Xona",
+      "assignedGroups": "Biriktirilgan guruhlar"
+    }
+  },
+  "searchPage": {
+    "title": "Qidirish va filter",
+    "subtitle": "Talabalarni demo filterlar, eksport va preview bilan toping",
+    "filtersTitle": "Qidiruv filterlari",
+    "filtersDescription": "Mock data ni status, guruh va stipendiya bo'yicha filterlash",
+    "searchPlaceholder": "Ism, HEMIS ID yoki email",
+    "status": "Holat",
+    "group": "Guruh",
+    "scholarship": "Stipendiya",
+    "allStatuses": "Barcha holatlar",
+    "allGroups": "Barcha guruhlar",
+    "resultsTitle": "Natijalar",
+    "resultsCount": "{{count}} ta talaba topildi",
+    "preview": "Preview",
+    "table": {
+      "name": "Ism",
+      "group": "Guruh",
+      "tutor": "Tutor",
+      "completion": "To'ldirish",
+      "status": "Holat",
+      "action": "Amal"
+    }
+  },
+  "audit": {
+    "title": "Audit jurnali",
+    "subtitle": "Tizim faoliyati, ruxsatlar o'zgarishi va talaba yangilanishlarini kuzating",
+    "logEntries": "Jurnal yozuvlari",
+    "highSeverity": "Yuqori daraja",
+    "demoCoverage": "Demo qamrovi",
+    "demoCoverageText": "Har bir log yozuvida IP manzil, severity va o'zgarish tafsilotlari bor.",
+    "activityLog": "Faoliyat jurnali",
+    "activityLogDesc": "Tizimdagi barcha harakat va o'zgarishlar",
+    "searchPlaceholder": "Foydalanuvchi, amal yoki entity bo'yicha qidiring...",
+    "inspect": "Tekshirish",
+    "severity": {
+      "low": "Past",
+      "medium": "O'rta",
+      "high": "Yuqori"
+    },
+    "table": {
+      "timestamp": "Vaqt",
+      "user": "Foydalanuvchi",
+      "action": "Amal",
+      "entity": "Entity",
+      "severity": "Daraja",
+      "inspect": "Amal"
+    },
+    "modal": {
+      "entity": "Entity",
+      "ipAddress": "IP manzil",
+      "severity": "Daraja",
+      "changeDetails": "O'zgarish tafsilotlari"
+    }
+  },
+  "settings": {
+    "title": "Dekan sozlamalari",
+    "subtitle": "Ilova sozlamalarini boshqaring",
+    "systemConfiguration": "Tizim konfiguratsiyasi",
+    "systemConfigurationDesc": "Ilova uchun global sozlamalar",
+    "pnflRequirement": "PNFL talabi",
+    "pnflRequirementDesc": "Barcha talabalar uchun PNFL hujjatlarini talab qilish",
+    "contractModule": "Shartnoma moduli",
+    "contractModuleDesc": "Shartnoma boshqaruvi modulini yoqish"
+  },
+  "profile": {
+    "title": "Talaba profili",
+    "subtitle": "To'liq to'ldirilgan demo talaba profili",
+    "faculty": "Fakultet",
+    "advisor": "Maslahatchi",
+    "status": "Holat",
+    "readyForDemo": "Demo ko'rsatish uchun tayyor",
+    "saving": "Saqlanmoqda...",
+    "saveChanges": "O'zgarishlarni saqlash",
+    "completion": "Profil to'ldirilishi",
+    "hemisId": "HEMIS ID",
+    "sections": {
+      "personal": "Shaxsiy ma'lumotlar",
+      "education": "Ta'lim ma'lumotlari",
+      "address": "Manzil ma'lumotlari",
+      "health": "Sog'liq ma'lumotlari",
+      "languages": "Til ko'nikmalari",
+      "achievements": "Yutuqlar",
+      "contact": "Kontakt ma'lumotlari",
+      "records": "Hayfisand yozuvlari",
+      "family": "Oila a'zolari",
+      "social": "Ijtimoiy holat",
+      "dormitory": "Yotoqxona"
+    },
+    "labels": {
+      "firstName": "Ism",
+      "lastName": "Familiya",
+      "dateOfBirth": "Tug'ilgan sana",
+      "gender": "Jinsi",
+      "nationality": "Millati",
+      "program": "Yo'nalish",
+      "enrollmentYear": "Qabul yili",
+      "expectedGraduation": "Bitirish yili",
+      "gpa": "GPA",
+      "streetAddress": "Ko'cha manzili",
+      "city": "Shahar",
+      "state": "Viloyat/Hudud",
+      "postalCode": "Pochta indeksi",
+      "country": "Mamlakat",
+      "bloodType": "Qon guruhi",
+      "disability": "Nogironlik",
+      "insurance": "Sug'urta",
+      "phone": "Telefon",
+      "emergencyContact": "Favqulodda kontakt",
+      "building": "Bino",
+      "room": "Xona",
+      "status": "Holat"
+    }
+  },
+  "notFound": {
+    "title": "Sahifa topilmadi",
+    "description": "Siz qidirayotgan sahifa mavjud emas yoki ko'chirilgan.",
+    "back": "Dashboard ga qaytish"
+  },
+  "componentsDemo": {
+    "title": "UI komponentlar demo",
+    "subtitle": "Student monitoring platformasi uchun qayta ishlatiladigan dizayn tizimi komponentlari",
+    "buttons": {
+      "title": "Tugmalar",
+      "desc": "Tugma variantlari va o'lchamlari",
+      "default": "Standart",
+      "secondary": "Ikkinchi",
+      "outline": "Outline",
+      "destructive": "Xavfli",
+      "ghost": "Ghost",
+      "small": "Kichik",
+      "large": "Katta"
+    },
+    "inputs": {
+      "title": "Input va form elementlar",
+      "desc": "Matnli input, checkbox, switch",
+      "input": "Input",
+      "placeholder": "Matn kiriting...",
+      "checkbox": "Checkbox",
+      "switch": "Switch"
+    },
+    "badges": {
+      "title": "Badge lar",
+      "desc": "Status va role badge lar"
+    },
+    "tabs": {
+      "title": "Tab lar",
+      "desc": "Tab navigatsiyasi",
+      "tab1": "Tab 1",
+      "tab2": "Tab 2",
+      "tab3": "Tab 3",
+      "content1": "Tab 1 kontenti",
+      "content2": "Tab 2 kontenti",
+      "content3": "Tab 3 kontenti"
+    },
+    "accordion": {
+      "title": "Accordion",
+      "desc": "Yig'iladigan bo'limlar",
+      "section1": "Bo'lim 1",
+      "section2": "Bo'lim 2",
+      "content1": "Bo'lim 1 kontenti",
+      "content2": "Bo'lim 2 kontenti"
+    },
+    "dialog": {
+      "title": "Dialog",
+      "desc": "Modal oyna",
+      "open": "Dialog ochish",
+      "modalTitle": "Dialog sarlavhasi",
+      "modalDesc": "Bu dialog tavsifi."
+    },
+    "toastTitle": "Toast bildirishnomalar",
+    "toastDesc": "Toast bildirishnomalarni ishga tushirish",
+    "toast": {
+      "success": { "button": "Muvaffaqiyat", "title": "Muvaffaqiyatli toast", "message": "Bu muvaffaqiyatli bildirishnoma" },
+      "error": { "button": "Xato", "title": "Xato toast", "message": "Bu xato bildirishnomasi" },
+      "info": { "button": "Info", "title": "Info toast", "message": "Bu info bildirishnomasi" },
+      "warning": { "button": "Ogohlantirish", "title": "Ogohlantirish toast", "message": "Bu ogohlantirish bildirishnomasi" }
+    },
+    "fileUpload": {
+      "title": "Fayl yuklash",
+      "desc": "Fayl yuklash komponenti"
+    },
+    "dataTable": {
+      "title": "Data jadval",
+      "desc": "Mock data bilan qayta ishlatiladigan jadval"
+    },
+    "avatar": {
+      "title": "Avatar",
+      "desc": "Foydalanuvchi avatari"
+    },
+    "table": {
+      "name": "Ism",
+      "hemisId": "HEMIS ID",
+      "status": "Holat"
+    }
+  },
+  "fileUpload": {
+    "prompt": "Yuklash uchun bosing yoki faylni sudrab tashlang",
+    "acceptHint": "{{types}} {{size}}MB gacha",
+    "sizeOnly": "{{size}}MB gacha",
+    "maxSizeError": "Fayl hajmi {{size}}MB dan kichik bo'lishi kerak"
+  }
+}

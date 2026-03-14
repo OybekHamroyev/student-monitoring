@@ -1,0 +1,384 @@
+{
+  "languages": {
+    "en": "Английский",
+    "ru": "Русский",
+    "uz": "Узбекский"
+  },
+  "app": {
+    "title": "Student Monitor",
+    "subtitle": "Панель администратора",
+    "mainMenu": "Главное меню",
+    "home": "Главная",
+    "safeMode": "Безопасный режим"
+  },
+  "common": {
+    "search": "Поиск",
+    "filter": "Фильтр",
+    "save": "Сохранить",
+    "cancel": "Отмена",
+    "delete": "Удалить",
+    "edit": "Редактировать",
+    "add": "Добавить",
+    "close": "Закрыть",
+    "loading": "Загрузка...",
+    "reset": "Сбросить",
+    "submit": "Отправить",
+    "export": "Экспорт",
+    "view": "Просмотр",
+    "logout": "Выйти",
+    "complete": "Заполнено",
+    "confirm": "Подтвердить",
+    "previous": "Назад",
+    "next": "Далее",
+    "all": "Все",
+    "yes": "Да",
+    "no": "Нет",
+    "none": "Нет",
+    "active": "Активно"
+  },
+  "status": {
+    "active": "Активный",
+    "inactive": "Неактивный",
+    "graduated": "Выпускник",
+    "warning": "Предупреждение",
+    "suspended": "Приостановлен",
+    "pending": "В ожидании",
+    "available": "Доступен",
+    "busy": "Занят",
+    "delivered": "Доставлено",
+    "shipped": "Отправлено"
+  },
+  "roles": {
+    "tutor": "Куратор",
+    "vice_dean": "Замдекана",
+    "dean": "Декан",
+    "admin": "Администратор"
+  },
+  "nav": {
+    "dashboard": "Панель",
+    "groups": "Группы",
+    "groupList": "Список групп",
+    "studentList": "Список студентов",
+    "studentProfiles": "Профили студентов",
+    "searchFilter": "Поиск и фильтр",
+    "pdfExport": "Экспорт PDF",
+    "tutorManagement": "Управление кураторами",
+    "deanSettings": "Настройки декана",
+    "auditLogs": "Журнал аудита",
+    "uiComponents": "Демо UI-компонентов"
+  },
+  "auth": {
+    "login": "Войти",
+    "description": "Введите данные для входа в административную панель",
+    "demoAccounts": "Демо-аккаунты",
+    "email": "Email",
+    "emailPlaceholder": "admin@university.edu",
+    "password": "Пароль",
+    "passwordPlaceholder": "demo12345",
+    "rememberMe": "Запомнить меня",
+    "signingIn": "Вход...",
+    "accounts": {
+      "dean": "Демо декана",
+      "admin": "Демо администратора",
+      "tutor": "Демо куратора"
+    }
+  },
+  "dashboard": {
+    "welcomeBack": "С возвращением",
+    "admin": "Администратор",
+    "monthlyEarnings": "Ежемесячный доход",
+    "lastMonthGrowth": "{{value}} за прошлый месяц",
+    "salesOverview": "Обзор продаж",
+    "lastMonths": "Последние {{count}} месяцев",
+    "previousMonth": "Прошлый месяц",
+    "currentMonth": "Текущий месяц",
+    "totalOrders": "Все заказы",
+    "searchOrders": "Поиск заказа...",
+    "stats": {
+      "productsSold": { "title": "Продано товаров", "subtitle": "Количество проданных товаров" },
+      "totalSales": { "title": "Общие продажи", "subtitle": "Совокупная выручка" },
+      "monthlySales": { "title": "Продажи за месяц", "subtitle": "Сгенерированные продажи" },
+      "totalCustomers": { "title": "Всего клиентов", "subtitle": "Привлеченные клиенты" }
+    },
+    "table": {
+      "id": "Id",
+      "product": "Товар",
+      "customer": "Клиент",
+      "quantity": "Количество",
+      "status": "Статус",
+      "price": "Цена",
+      "action": "Действие"
+    }
+  },
+  "students": {
+    "title": "Студенты",
+    "subtitle": "Управляйте профилями студентов с демо-данными для предпросмотра",
+    "addStudent": "Добавить студента",
+    "visibleStudents": "Показано студентов",
+    "highCompletion": "Заполнение выше 85%",
+    "quickNote": "Короткая заметка",
+    "quickNoteText": "В демо-записях есть телефон, город, группа, куратор и стипендия, чтобы детальная карточка выглядела полноценно.",
+    "listTitle": "Список студентов",
+    "listDescription": "Поиск и просмотр мок-данных до подключения API",
+    "searchPlaceholder": "Поиск по имени, HEMIS ID или группе...",
+    "openFullProfile": "Открыть полный профиль",
+    "table": {
+      "name": "Имя",
+      "hemisId": "HEMIS ID",
+      "group": "Группа",
+      "completion": "Заполнение",
+      "status": "Статус",
+      "actions": "Действия"
+    },
+    "modal": {
+      "email": "Email",
+      "tutor": "Куратор",
+      "phone": "Телефон",
+      "city": "Город",
+      "scholarship": "Стипендия",
+      "lastUpdate": "Последнее обновление"
+    }
+  },
+  "groups": {
+    "title": "Группы",
+    "subtitle": "Управляйте группами студентов, расписанием и заметками",
+    "addGroup": "Добавить группу",
+    "activeGroups": "Активные группы",
+    "highestCompletion": "Максимальное заполнение",
+    "previewMode": "Режим предпросмотра",
+    "previewModeText": "Каждая карточка открывает модальное окно с аудиторией, расписанием, куратором и заметкой.",
+    "viewDetails": "Подробнее",
+    "card": {
+      "program": "Программа",
+      "year": "Курс",
+      "students": "Студенты",
+      "profileCompletion": "Заполнение профилей"
+    },
+    "modal": {
+      "tutor": "Куратор",
+      "room": "Аудитория",
+      "schedule": "Расписание",
+      "curatorNote": "Заметка куратора"
+    }
+  },
+  "tutors": {
+    "title": "Кураторы",
+    "subtitle": "Управляйте назначениями кураторов, кабинетами и покрытием групп",
+    "addTutor": "Добавить куратора",
+    "visibleTutors": "Кураторов в списке",
+    "coveredStudents": "Охвачено студентов",
+    "demoExtras": "Дополнения демо",
+    "demoExtrasText": "В модальных окнах доступны кабинет, телефон, email и статус.",
+    "assignedGroups": "Назначенные группы",
+    "totalStudents": "Всего студентов",
+    "completion": "Заполнение",
+    "previewTutor": "Предпросмотр куратора",
+    "modal": {
+      "email": "Email",
+      "phone": "Телефон",
+      "office": "Кабинет",
+      "assignedGroups": "Назначенные группы"
+    }
+  },
+  "searchPage": {
+    "title": "Поиск и фильтр",
+    "subtitle": "Ищите студентов с демо-фильтрами, экспортом и предпросмотром",
+    "filtersTitle": "Фильтры поиска",
+    "filtersDescription": "Фильтрация мок-данных по статусу, группе и стипендии",
+    "searchPlaceholder": "Имя, HEMIS ID или email",
+    "status": "Статус",
+    "group": "Группа",
+    "scholarship": "Стипендия",
+    "allStatuses": "Все статусы",
+    "allGroups": "Все группы",
+    "resultsTitle": "Результаты",
+    "resultsCount": "Найдено студентов: {{count}}",
+    "preview": "Предпросмотр",
+    "table": {
+      "name": "Имя",
+      "group": "Группа",
+      "tutor": "Куратор",
+      "completion": "Заполнение",
+      "status": "Статус",
+      "action": "Действие"
+    }
+  },
+  "audit": {
+    "title": "Журнал аудита",
+    "subtitle": "Отслеживайте активность системы, изменения прав и обновления студентов",
+    "logEntries": "Записи журнала",
+    "highSeverity": "Высокая важность",
+    "demoCoverage": "Покрытие демо",
+    "demoCoverageText": "Каждая запись теперь содержит IP-адрес, уровень важности и детали изменений.",
+    "activityLog": "Журнал активности",
+    "activityLogDesc": "Все действия и изменения в системе",
+    "searchPlaceholder": "Поиск по пользователю, действию или сущности...",
+    "inspect": "Проверить",
+    "severity": {
+      "low": "Низкий",
+      "medium": "Средний",
+      "high": "Высокий"
+    },
+    "table": {
+      "timestamp": "Время",
+      "user": "Пользователь",
+      "action": "Действие",
+      "entity": "Сущность",
+      "severity": "Важность",
+      "inspect": "Действие"
+    },
+    "modal": {
+      "entity": "Сущность",
+      "ipAddress": "IP-адрес",
+      "severity": "Важность",
+      "changeDetails": "Подробности изменения"
+    }
+  },
+  "settings": {
+    "title": "Настройки декана",
+    "subtitle": "Настройка параметров приложения",
+    "systemConfiguration": "Системная конфигурация",
+    "systemConfigurationDesc": "Глобальные настройки приложения",
+    "pnflRequirement": "Требование PNFL",
+    "pnflRequirementDesc": "Требовать документы PNFL для всех студентов",
+    "contractModule": "Модуль контрактов",
+    "contractModuleDesc": "Включить модуль управления контрактами"
+  },
+  "profile": {
+    "title": "Профиль студента",
+    "subtitle": "Полностью заполненный демо-профиль студента",
+    "faculty": "Факультет",
+    "advisor": "Куратор",
+    "status": "Статус",
+    "readyForDemo": "Готово для демо-показа",
+    "saving": "Сохранение...",
+    "saveChanges": "Сохранить изменения",
+    "completion": "Заполнение профиля",
+    "hemisId": "HEMIS ID",
+    "sections": {
+      "personal": "Личная информация",
+      "education": "Информация об обучении",
+      "address": "Адрес",
+      "health": "Медицинская информация",
+      "languages": "Языковые навыки",
+      "achievements": "Достижения",
+      "contact": "Контактная информация",
+      "records": "Записи Hayfisand",
+      "family": "Члены семьи",
+      "social": "Социальный статус",
+      "dormitory": "Общежитие"
+    },
+    "labels": {
+      "firstName": "Имя",
+      "lastName": "Фамилия",
+      "dateOfBirth": "Дата рождения",
+      "gender": "Пол",
+      "nationality": "Национальность",
+      "program": "Программа",
+      "enrollmentYear": "Год поступления",
+      "expectedGraduation": "Ожидаемый выпуск",
+      "gpa": "GPA",
+      "streetAddress": "Адрес",
+      "city": "Город",
+      "state": "Регион",
+      "postalCode": "Почтовый индекс",
+      "country": "Страна",
+      "bloodType": "Группа крови",
+      "disability": "Инвалидность",
+      "insurance": "Страховка",
+      "phone": "Телефон",
+      "emergencyContact": "Экстренный контакт",
+      "building": "Корпус",
+      "room": "Комната",
+      "status": "Статус"
+    }
+  },
+  "notFound": {
+    "title": "Страница не найдена",
+    "description": "Страница, которую вы ищете, не существует или была перемещена.",
+    "back": "Вернуться на панель"
+  },
+  "componentsDemo": {
+    "title": "Демо UI-компонентов",
+    "subtitle": "Переиспользуемые компоненты дизайн-системы платформы мониторинга студентов",
+    "buttons": {
+      "title": "Кнопки",
+      "desc": "Варианты и размеры кнопок",
+      "default": "Основная",
+      "secondary": "Вторичная",
+      "outline": "Контур",
+      "destructive": "Опасная",
+      "ghost": "Прозрачная",
+      "small": "Маленькая",
+      "large": "Большая"
+    },
+    "inputs": {
+      "title": "Поля ввода",
+      "desc": "Текстовое поле, чекбокс, переключатель",
+      "input": "Поле ввода",
+      "placeholder": "Введите текст...",
+      "checkbox": "Чекбокс",
+      "switch": "Переключатель"
+    },
+    "badges": {
+      "title": "Бейджи",
+      "desc": "Бейджи статусов и ролей"
+    },
+    "tabs": {
+      "title": "Вкладки",
+      "desc": "Навигация по вкладкам",
+      "tab1": "Вкладка 1",
+      "tab2": "Вкладка 2",
+      "tab3": "Вкладка 3",
+      "content1": "Содержимое вкладки 1",
+      "content2": "Содержимое вкладки 2",
+      "content3": "Содержимое вкладки 3"
+    },
+    "accordion": {
+      "title": "Аккордеон",
+      "desc": "Сворачиваемые секции",
+      "section1": "Секция 1",
+      "section2": "Секция 2",
+      "content1": "Содержимое секции 1",
+      "content2": "Содержимое секции 2"
+    },
+    "dialog": {
+      "title": "Диалог",
+      "desc": "Модальное окно",
+      "open": "Открыть диалог",
+      "modalTitle": "Заголовок диалога",
+      "modalDesc": "Это описание диалога."
+    },
+    "toastTitle": "Toast-уведомления",
+    "toastDesc": "Запуск toast-уведомлений",
+    "toast": {
+      "success": { "button": "Успех", "title": "Успешное уведомление", "message": "Это успешное уведомление" },
+      "error": { "button": "Ошибка", "title": "Ошибка", "message": "Это уведомление об ошибке" },
+      "info": { "button": "Инфо", "title": "Информация", "message": "Это информационное уведомление" },
+      "warning": { "button": "Внимание", "title": "Предупреждение", "message": "Это предупреждающее уведомление" }
+    },
+    "fileUpload": {
+      "title": "Загрузка файла",
+      "desc": "Компонент загрузки файла"
+    },
+    "dataTable": {
+      "title": "Таблица данных",
+      "desc": "Переиспользуемая таблица с мок-данными"
+    },
+    "avatar": {
+      "title": "Аватар",
+      "desc": "Аватар пользователя"
+    },
+    "table": {
+      "name": "Имя",
+      "hemisId": "HEMIS ID",
+      "status": "Статус"
+    }
+  },
+  "fileUpload": {
+    "prompt": "Нажмите для загрузки или перетащите файл",
+    "acceptHint": "{{types}} до {{size}}MB",
+    "sizeOnly": "До {{size}}MB",
+    "maxSizeError": "Размер файла должен быть меньше {{size}}MB"
+  }
+}

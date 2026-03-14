@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 220 33% 98%;
+  --foreground: 224 39% 16%;
+  --card: 0 0% 100%;
+  --card-foreground: 224 39% 16%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 224 39% 16%;
+  --primary: 224 78% 53%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 224 42% 95%;
+  --secondary-foreground: 224 39% 16%;
+  --muted: 220 28% 95%;
+  --muted-foreground: 224 16% 52%;
+  --accent: 222 54% 95%;
+  --accent-foreground: 224 39% 16%;
+  --destructive: 8 88% 63%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 222 26% 89%;
+  --input: 222 28% 87%;
+  --ring: 224 78% 53%;
+  --radius: 1rem;
+  --sidebar: 0 0% 100%;
+  --sidebar-foreground: 224 39% 16%;
+  --sidebar-border: 222 26% 89%;
+  --surface: 224 50% 96%;
+  --surface-strong: 223 83% 58%;
+  --success: 170 72% 45%;
+  --warning: 40 92% 54%;
+  --info: 188 74% 58%;
+}
+
+.dark {
+  --background: 224 34% 10%;
+  --foreground: 220 25% 94%;
+  --card: 224 29% 14%;
+  --card-foreground: 220 25% 94%;
+  --popover: 224 29% 14%;
+  --popover-foreground: 220 25% 94%;
+  --primary: 224 88% 66%;
+  --primary-foreground: 222 47% 11%;
+  --secondary: 224 22% 20%;
+  --secondary-foreground: 220 25% 94%;
+  --muted: 224 22% 18%;
+  --muted-foreground: 219 14% 70%;
+  --accent: 224 24% 20%;
+  --accent-foreground: 220 25% 94%;
+  --destructive: 10 78% 58%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 224 20% 25%;
+  --input: 224 20% 24%;
+  --ring: 224 88% 66%;
+  --sidebar: 224 31% 12%;
+  --sidebar-foreground: 220 25% 94%;
+  --sidebar-border: 224 20% 23%;
+  --surface: 224 25% 17%;
+  --surface-strong: 224 88% 66%;
+  --success: 170 60% 45%;
+  --warning: 42 88% 56%;
+  --info: 188 64% 56%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply min-h-screen bg-background text-foreground antialiased;
+    font-family: "Segoe UI", "Trebuchet MS", ui-sans-serif, system-ui, sans-serif;
+    background-image:
+      radial-gradient(circle at top left, hsl(var(--primary) / 0.12), transparent 26%),
+      radial-gradient(circle at top right, hsl(var(--info) / 0.1), transparent 18%),
+      linear-gradient(180deg, hsl(var(--background)), hsl(var(--background)));
+  }
+
+  #root {
+    @apply min-h-screen;
+  }
+}
+
+@layer components {
+  .panel-card {
+    @apply rounded-[28px] border border-border/70 bg-card shadow-[0_18px_48px_-24px_rgba(36,53,102,0.28)];
+  }
+
+  .panel-title {
+    @apply text-[1.75rem] font-semibold tracking-[-0.03em] text-foreground;
+  }
+
+  .soft-surface {
+    background: linear-gradient(145deg, hsl(var(--surface)), hsl(var(--card)));
+  }
+}

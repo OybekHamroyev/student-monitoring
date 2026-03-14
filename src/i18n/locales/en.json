@@ -1,0 +1,396 @@
+{
+  "languages": {
+    "en": "English",
+    "ru": "Russian",
+    "uz": "Uzbek"
+  },
+  "app": {
+    "title": "Student Monitor",
+    "subtitle": "Admin Panel",
+    "mainMenu": "Main Menu",
+    "home": "Home",
+    "safeMode": "Safe mode"
+  },
+  "common": {
+    "search": "Search",
+    "filter": "Filter",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "close": "Close",
+    "loading": "Loading...",
+    "reset": "Reset",
+    "submit": "Submit",
+    "export": "Export",
+    "view": "View",
+    "logout": "Log out",
+    "complete": "Complete",
+    "confirm": "Confirm",
+    "previous": "Previous",
+    "next": "Next",
+    "all": "All",
+    "yes": "Yes",
+    "no": "No",
+    "none": "None",
+    "active": "Active"
+  },
+  "status": {
+    "active": "Active",
+    "inactive": "Inactive",
+    "graduated": "Graduated",
+    "warning": "Warning",
+    "suspended": "Suspended",
+    "pending": "Pending",
+    "available": "Available",
+    "busy": "Busy",
+    "delivered": "Delivered",
+    "shipped": "Shipped"
+  },
+  "roles": {
+    "tutor": "Tutor",
+    "vice_dean": "Vice Dean",
+    "dean": "Dean",
+    "admin": "Admin"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "groups": "Groups",
+    "groupList": "Group List",
+    "studentList": "Student List",
+    "studentProfiles": "Student Profiles",
+    "searchFilter": "Search & Filter",
+    "pdfExport": "PDF Export",
+    "tutorManagement": "Tutor Management",
+    "deanSettings": "Dean Settings",
+    "auditLogs": "Audit Logs",
+    "uiComponents": "UI Components Demo"
+  },
+  "auth": {
+    "login": "Sign In",
+    "description": "Enter your credentials to access the admin dashboard",
+    "demoAccounts": "Demo Accounts",
+    "email": "Email",
+    "emailPlaceholder": "admin@university.edu",
+    "password": "Password",
+    "passwordPlaceholder": "demo12345",
+    "rememberMe": "Remember me",
+    "signingIn": "Signing in...",
+    "accounts": {
+      "dean": "Dean Demo",
+      "admin": "Admin Demo",
+      "tutor": "Tutor Demo"
+    }
+  },
+  "dashboard": {
+    "welcomeBack": "Welcome back",
+    "admin": "Admin",
+    "monthlyEarnings": "Monthly Earnings",
+    "lastMonthGrowth": "{{value}} last month",
+    "salesOverview": "Sales Overview",
+    "lastMonths": "Last {{count}} Months",
+    "previousMonth": "Previous Month",
+    "currentMonth": "Current Month",
+    "totalOrders": "Total Orders",
+    "searchOrders": "Search order here...",
+    "stats": {
+      "productsSold": {
+        "title": "Products Sold",
+        "subtitle": "Number of items sold"
+      },
+      "totalSales": {
+        "title": "Total Sales",
+        "subtitle": "Cumulative sales revenue"
+      },
+      "monthlySales": {
+        "title": "Monthly Sales",
+        "subtitle": "Sales generated"
+      },
+      "totalCustomers": {
+        "title": "Total Customers",
+        "subtitle": "Customers acquired"
+      }
+    },
+    "table": {
+      "id": "Id",
+      "product": "Product",
+      "customer": "Customer",
+      "quantity": "Quantity",
+      "status": "Status",
+      "price": "Price",
+      "action": "Action"
+    }
+  },
+  "students": {
+    "title": "Students",
+    "subtitle": "Manage and monitor student profiles with preview-ready demo data",
+    "addStudent": "Add Student",
+    "visibleStudents": "Visible students",
+    "highCompletion": "Completion above 85%",
+    "quickNote": "Quick note",
+    "quickNoteText": "Demo records now include phone, city, group, tutor and scholarship fields so each detail view has enough content.",
+    "listTitle": "Student List",
+    "listDescription": "Search and inspect mock records before wiring the API",
+    "searchPlaceholder": "Search by name, HEMIS ID or group...",
+    "openFullProfile": "Open Full Profile",
+    "table": {
+      "name": "Name",
+      "hemisId": "HEMIS ID",
+      "group": "Group",
+      "completion": "Completion",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "modal": {
+      "email": "Email",
+      "tutor": "Tutor",
+      "phone": "Phone",
+      "city": "City",
+      "scholarship": "Scholarship",
+      "lastUpdate": "Last Update"
+    }
+  },
+  "groups": {
+    "title": "Groups",
+    "subtitle": "Manage student groups and assignments with demo schedules and notes",
+    "addGroup": "Add Group",
+    "activeGroups": "Active groups",
+    "highestCompletion": "Highest completion",
+    "previewMode": "Preview mode",
+    "previewModeText": "Each card now opens a detail modal with room, schedule, tutor and curator note.",
+    "viewDetails": "View Details",
+    "card": {
+      "program": "Program",
+      "year": "Year",
+      "students": "Students",
+      "profileCompletion": "Profile completion"
+    },
+    "modal": {
+      "tutor": "Tutor",
+      "room": "Room",
+      "schedule": "Schedule",
+      "curatorNote": "Curator note"
+    }
+  },
+  "tutors": {
+    "title": "Tutors",
+    "subtitle": "Manage tutor assignments, offices and group coverage",
+    "addTutor": "Add Tutor",
+    "visibleTutors": "Visible tutors",
+    "coveredStudents": "Covered students",
+    "demoExtras": "Demo extras",
+    "demoExtrasText": "Office location, phone, email and status are now available in preview modals.",
+    "assignedGroups": "Assigned Groups",
+    "totalStudents": "Total Students",
+    "completion": "Completion",
+    "previewTutor": "Preview Tutor",
+    "modal": {
+      "email": "Email",
+      "phone": "Phone",
+      "office": "Office",
+      "assignedGroups": "Assigned groups"
+    }
+  },
+  "searchPage": {
+    "title": "Search & Filter",
+    "subtitle": "Find students with demo filters, export actions and detail previews",
+    "filtersTitle": "Search Filters",
+    "filtersDescription": "Filter mock data by status, group and scholarship",
+    "searchPlaceholder": "Name, HEMIS ID or email",
+    "status": "Status",
+    "group": "Group",
+    "scholarship": "Scholarship",
+    "allStatuses": "All Statuses",
+    "allGroups": "All Groups",
+    "resultsTitle": "Results",
+    "resultsCount": "Found {{count}} students",
+    "preview": "Preview",
+    "table": {
+      "name": "Name",
+      "group": "Group",
+      "tutor": "Tutor",
+      "completion": "Completion",
+      "status": "Status",
+      "action": "Action"
+    }
+  },
+  "audit": {
+    "title": "Audit Logs",
+    "subtitle": "Monitor system activity, permission changes and student updates",
+    "logEntries": "Log entries",
+    "highSeverity": "High severity",
+    "demoCoverage": "Demo coverage",
+    "demoCoverageText": "Each log now includes IP address, severity and change details for modal preview.",
+    "activityLog": "Activity Log",
+    "activityLogDesc": "All system activities and modifications",
+    "searchPlaceholder": "Search by user, action, or entity...",
+    "inspect": "Inspect",
+    "severity": {
+      "low": "Low",
+      "medium": "Medium",
+      "high": "High"
+    },
+    "table": {
+      "timestamp": "Timestamp",
+      "user": "User",
+      "action": "Action",
+      "entity": "Entity",
+      "severity": "Severity",
+      "inspect": "Action"
+    },
+    "modal": {
+      "entity": "Entity",
+      "ipAddress": "IP Address",
+      "severity": "Severity",
+      "changeDetails": "Change details"
+    }
+  },
+  "settings": {
+    "title": "Dean Settings",
+    "subtitle": "Configure application settings",
+    "systemConfiguration": "System Configuration",
+    "systemConfigurationDesc": "Global settings for the application",
+    "pnflRequirement": "PNFL Requirement",
+    "pnflRequirementDesc": "Require PNFL documents for all students",
+    "contractModule": "Contract Module",
+    "contractModuleDesc": "Enable contract management module"
+  },
+  "profile": {
+    "title": "Student Profile",
+    "subtitle": "Complete and manage student information with fully populated mock sections",
+    "faculty": "Faculty",
+    "advisor": "Advisor",
+    "status": "Status",
+    "readyForDemo": "Ready for demo review",
+    "saving": "Saving...",
+    "saveChanges": "Save Changes",
+    "completion": "Profile Completion",
+    "hemisId": "HEMIS ID",
+    "sections": {
+      "personal": "Personal Information",
+      "education": "Education Information",
+      "address": "Address Information",
+      "health": "Health Information",
+      "languages": "Language Skills",
+      "achievements": "Achievements",
+      "contact": "Contact Information",
+      "records": "Hayfisand Records",
+      "family": "Family Members",
+      "social": "Social Status",
+      "dormitory": "Dormitory"
+    },
+    "labels": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "dateOfBirth": "Date of Birth",
+      "gender": "Gender",
+      "nationality": "Nationality",
+      "program": "Program",
+      "enrollmentYear": "Enrollment Year",
+      "expectedGraduation": "Expected Graduation",
+      "gpa": "GPA",
+      "streetAddress": "Street Address",
+      "city": "City",
+      "state": "State/Region",
+      "postalCode": "Postal Code",
+      "country": "Country",
+      "bloodType": "Blood Type",
+      "disability": "Disability",
+      "insurance": "Insurance",
+      "phone": "Phone",
+      "emergencyContact": "Emergency Contact",
+      "building": "Building",
+      "room": "Room",
+      "status": "Status"
+    }
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The page you are looking for does not exist or has been moved.",
+    "back": "Back to Dashboard"
+  },
+  "componentsDemo": {
+    "title": "UI Components Demo",
+    "subtitle": "Reusable design system components for the student monitoring platform",
+    "buttons": {
+      "title": "Buttons",
+      "desc": "Button variants and sizes",
+      "default": "Default",
+      "secondary": "Secondary",
+      "outline": "Outline",
+      "destructive": "Destructive",
+      "ghost": "Ghost",
+      "small": "Small",
+      "large": "Large"
+    },
+    "inputs": {
+      "title": "Inputs & Form Fields",
+      "desc": "Text input, checkbox, switch",
+      "input": "Input",
+      "placeholder": "Enter text...",
+      "checkbox": "Checkbox",
+      "switch": "Switch"
+    },
+    "badges": {
+      "title": "Badges",
+      "desc": "Status and role badges"
+    },
+    "tabs": {
+      "title": "Tabs",
+      "desc": "Tab navigation",
+      "tab1": "Tab 1",
+      "tab2": "Tab 2",
+      "tab3": "Tab 3",
+      "content1": "Content for Tab 1",
+      "content2": "Content for Tab 2",
+      "content3": "Content for Tab 3"
+    },
+    "accordion": {
+      "title": "Accordion",
+      "desc": "Collapsible sections",
+      "section1": "Section 1",
+      "section2": "Section 2",
+      "content1": "Accordion content for section 1",
+      "content2": "Accordion content for section 2"
+    },
+    "dialog": {
+      "title": "Dialog",
+      "desc": "Modal dialog",
+      "open": "Open Dialog",
+      "modalTitle": "Dialog Title",
+      "modalDesc": "This is a dialog description."
+    },
+    "toastTitle": "Toast Notifications",
+    "toastDesc": "Trigger toast notifications",
+    "toast": {
+      "success": { "button": "Success", "title": "Success Toast", "message": "This is a success notification" },
+      "error": { "button": "Error", "title": "Error Toast", "message": "This is an error notification" },
+      "info": { "button": "Info", "title": "Info Toast", "message": "This is an info notification" },
+      "warning": { "button": "Warning", "title": "Warning Toast", "message": "This is a warning notification" }
+    },
+    "fileUpload": {
+      "title": "File Upload",
+      "desc": "File upload component"
+    },
+    "dataTable": {
+      "title": "Data Table",
+      "desc": "Reusable table with mock data"
+    },
+    "avatar": {
+      "title": "Avatar",
+      "desc": "User avatar"
+    },
+    "table": {
+      "name": "Name",
+      "hemisId": "HEMIS ID",
+      "status": "Status"
+    }
+  },
+  "fileUpload": {
+    "prompt": "Click to upload or drag and drop",
+    "acceptHint": "{{types}} up to {{size}}MB",
+    "sizeOnly": "Up to {{size}}MB",
+    "maxSizeError": "File size must be less than {{size}}MB"
+  }
+}

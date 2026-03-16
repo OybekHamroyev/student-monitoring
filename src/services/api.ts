@@ -1,11 +1,57 @@
 import client from '@/api/client'
+import type { UserRole } from '@/store/slices/auth'
 
 // Auth API
+export interface LoginResponseData {
+  first_name: string | null
+  last_name: string | null
+  email: string
+  birthday: string | null
+  gender: string | null
+  image: string | null
+  address: string | null
+  nationality: string | null
+  passport_seria: string | null
+  phone_number: string | null
+  workplace: string | null
+  role: string
+}
+
+export interface LoginResponse {
+  success: boolean
+  message: string
+  data: LoginResponseData
+  access: string
+  refresh: string
+  username: string
+}
+
 export const authApi = {
-  login: (email: string, password: string) =>
-    client.post('/auth/login', { email, password }),
-  logout: () => client.post('/auth/logout'),
+  login: (username: string, password: string) =>
+    client.post<LoginResponse>('/login/', { username, password }),
+  logout: () => client.post('/logout/'),
   getCurrentUser: () => client.get('/auth/me'),
+}
+
+export const normalizeUserRole = (role: string | null | undefined): UserRole => {
+  const normalizedRole = (role || '')
+    .trim()
+    .toLowerCase()
+    .replace(/[\s-]+/g, '_')
+
+  switch (normalizedRole) {
+    case 'dekan':
+    case 'dean':
+      return 'dean'
+    case 'dekan_o_rinbosari':
+    case 'dekan_orinbosari':
+    case 'vice_dean':
+      return 'vice_dean'
+    case 'tutor':
+      return 'tutor'
+    default:
+      return 'admin'
+  }
 }
 
 // Students API
@@ -17,6 +63,18 @@ export const studentsApi = {
   update: (id: string, data: any) => client.put(`/students/${id}`, data),
   delete: (id: string) => client.delete(`/students/${id}`),
   search: (query: string) => client.get('/students/search', { params: { q: query } }),
+}
+
+export interface HemisSyncResponse {
+  message: string
+  created: number
+  updated: number
+  last_page: number
+}
+
+export const hemisApi = {
+  importStudents: () => client.post<HemisSyncResponse>('/import-students/'),
+  updateStudents: () => client.post<HemisSyncResponse>('/update-students/'),
 }
 
 // Groups API

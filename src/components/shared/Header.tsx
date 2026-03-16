@@ -1,11 +1,12 @@
 import { useDispatch, useSelector } from 'react-redux'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import i18n from 'i18next'
 import { RootState, AppDispatch } from '@/store'
 import { setTheme } from '@/store/slices/theme'
 import { setLanguage } from '@/store/slices/language'
 import { logout } from '@/store/slices/auth'
+import { authApi } from '@/services/api'
 import { setMobileMenuOpen } from '@/store/slices/ui'
 import { Bell, ChevronDown, LogOut, Menu, Moon, Search, ShieldCheck, Sun, User } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -18,6 +19,9 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
+
+const AUTH_USER_STORAGE_KEY = 'auth_user'
+const REFRESH_TOKEN_STORAGE_KEY = 'refresh_token'
 
 const ROUTE_LABELS: Record<string, string> = {
   dashboard: 'nav.dashboard',
@@ -48,6 +52,7 @@ function getBreadcrumbs(pathname: string, t: (key: string) => string): { label: 
 export default function Header() {
   const { t } = useTranslation()
   const dispatch = useDispatch<AppDispatch>()
+  const navigate = useNavigate()
   const location = useLocation()
   const { user } = useSelector((state: RootState) => state.auth)
   const { mode } = useSelector((state: RootState) => state.theme)
@@ -61,6 +66,20 @@ export default function Header() {
   const handleLanguageChange = (lang: 'en' | 'ru' | 'uz') => {
     dispatch(setLanguage(lang))
     i18n.changeLanguage(lang)
+  }
+
+  const handleLogout = async () => {
+    try {
+      await authApi.logout()
+    } catch {
+      // Local session should still be cleared even if the backend logout fails.
+    } finally {
+      localStorage.removeItem('auth_token')
+      localStorage.removeItem(REFRESH_TOKEN_STORAGE_KEY)
+      localStorage.removeItem(AUTH_USER_STORAGE_KEY)
+      dispatch(logout())
+      navigate('/login', { replace: true })
+    }
   }
 
   return (
@@ -149,7 +168,7 @@ export default function Header() {
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuSeparator />
-              <DropdownMenuItem onClick={() => dispatch(logout())} className="text-destructive">
+              <DropdownMenuItem onClick={handleLogout} className="text-destructive">
                 <LogOut className="mr-2 h-4 w-4" />
                 {t('common.logout')}
               </DropdownMenuItem>

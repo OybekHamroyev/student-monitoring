@@ -1,7 +1,8 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { RootState, AppDispatch } from '@/store'
+import { setLoading, setUser } from '@/store/slices/auth'
 import { setTheme } from '@/store/slices/theme'
 import { setLanguage } from '@/store/slices/language'
 import i18n from '@/i18n'
@@ -23,8 +24,15 @@ import StudentProfile from '@/pages/StudentProfile'
 import ComponentsDemo from '@/pages/ComponentsDemo'
 import NotFound from '@/pages/NotFound'
 
+const AUTH_USER_STORAGE_KEY = 'auth_user'
+const REFRESH_TOKEN_STORAGE_KEY = 'refresh_token'
+
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
-  const { isAuthenticated } = useSelector((state: RootState) => state.auth)
+  const { isAuthenticated, isLoading } = useSelector((state: RootState) => state.auth)
+
+  if (isLoading) {
+    return null
+  }
 
   if (!isAuthenticated) {
     return <Navigate to="/login" replace />
@@ -35,8 +43,11 @@ function ProtectedRoute({ children }: { children: React.ReactNode }) {
 
 export default function App() {
   const dispatch = useDispatch<AppDispatch>()
+  const [isBootstrapped, setIsBootstrapped] = useState(false)
 
   useEffect(() => {
+    dispatch(setLoading(true))
+
     const savedTheme = localStorage.getItem('theme') || 'system'
     dispatch(setTheme(savedTheme as 'light' | 'dark' | 'system'))
     const savedLang = localStorage.getItem('language') as 'en' | 'ru' | 'uz' | null
@@ -44,7 +55,27 @@ export default function App() {
       dispatch(setLanguage(savedLang))
       i18n.changeLanguage(savedLang)
     }
+
+    const savedToken = localStorage.getItem('auth_token')
+    const savedUser = localStorage.getItem(AUTH_USER_STORAGE_KEY)
+
+    if (savedToken && savedUser) {
+      try {
+        dispatch(setUser(JSON.parse(savedUser)))
+      } catch {
+        localStorage.removeItem(AUTH_USER_STORAGE_KEY)
+        localStorage.removeItem('auth_token')
+        localStorage.removeItem(REFRESH_TOKEN_STORAGE_KEY)
+      }
+    }
+
+    dispatch(setLoading(false))
+    setIsBootstrapped(true)
   }, [dispatch])
+
+  if (!isBootstrapped) {
+    return null
+  }
 
   return (
     <>

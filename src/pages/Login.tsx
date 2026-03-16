@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
+import type { AxiosError } from 'axios'
 import { useTranslation } from 'react-i18next'
 import { AppDispatch } from '@/store'
 import { setUser } from '@/store/slices/auth'
@@ -8,16 +9,20 @@ import AuthLayout from '@/layouts/AuthLayout'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Checkbox } from '@/components/ui/checkbox'
+import { useNotification } from '@/hooks/useNotification'
 import { demoAccounts } from '@/mocks/demoData'
+import { authApi, normalizeUserRole } from '@/services/api'
+
+const AUTH_USER_STORAGE_KEY = 'auth_user'
+const REFRESH_TOKEN_STORAGE_KEY = 'refresh_token'
 
 export default function Login() {
   const { t } = useTranslation()
   const navigate = useNavigate()
   const dispatch = useDispatch<AppDispatch>()
-  const [email, setEmail] = useState(demoAccounts[0].email)
+  const toast = useNotification()
+  const [username, setUsername] = useState(demoAccounts[0].email)
   const [password, setPassword] = useState(demoAccounts[0].password)
-  const [rememberMe, setRememberMe] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -25,22 +30,31 @@ export default function Login() {
     setIsLoading(true)
 
     try {
-      const selectedAccount = demoAccounts.find((account) => account.email === email) ?? demoAccounts[0]
-      dispatch(
-        setUser({
-          id: selectedAccount.email,
-          name: selectedAccount.name,
-          email,
-          role: selectedAccount.role,
-        })
-      )
-      localStorage.setItem('auth_token', 'mock_token_123')
-
-      if (rememberMe) {
-        localStorage.setItem('remembered_email', email)
+      const response = await authApi.login(username, password)
+      const loginData = response.data
+      const firstName = loginData.data.first_name?.trim()
+      const lastName = loginData.data.last_name?.trim()
+      const fullName = [firstName, lastName].filter(Boolean).join(' ')
+      const user = {
+        id: loginData.username || loginData.data.email || username,
+        name: fullName || loginData.username || loginData.data.email || username,
+        email: loginData.data.email || username,
+        role: normalizeUserRole(loginData.data.role),
+        avatar: loginData.data.image || undefined,
       }
 
+      dispatch(setUser(user))
+      localStorage.setItem(AUTH_USER_STORAGE_KEY, JSON.stringify(user))
+      localStorage.setItem('auth_token', loginData.access)
+      localStorage.setItem(REFRESH_TOKEN_STORAGE_KEY, loginData.refresh)
+
       navigate('/dashboard')
+    } catch (error) {
+      const message =
+        (error as AxiosError<{ message?: string }>).response?.data?.message ||
+        'Login qilishda xatolik yuz berdi'
+
+      toast.error('Login bajarilmadi', message)
     } finally {
       setIsLoading(false)
     }
@@ -65,7 +79,7 @@ export default function Login() {
                   variant="outline"
                   size="sm"
                   onClick={() => {
-                    setEmail(account.email)
+                    setUsername(account.email)
                     setPassword(account.password)
                   }}
                 >
@@ -77,15 +91,15 @@ export default function Login() {
 
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-2">
-              <label htmlFor="email" className="text-sm font-medium">
-                {t('auth.email')}
+              <label htmlFor="username" className="text-sm font-medium">
+                Username
               </label>
               <Input
-                id="email"
-                type="email"
-                placeholder={t('auth.emailPlaceholder')}
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                id="username"
+                type="text"
+                placeholder="Username"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
                 required
               />
             </div>
@@ -104,17 +118,7 @@ export default function Login() {
               />
             </div>
 
-            <div className="flex items-center justify-between">
-              <div className="flex items-center space-x-2">
-                <Checkbox
-                  id="remember"
-                  checked={rememberMe}
-                  onCheckedChange={(checked) => setRememberMe(checked as boolean)}
-                />
-                <label htmlFor="remember" className="cursor-pointer text-sm">
-                  {t('auth.rememberMe')}
-                </label>
-              </div>
+            <div className="flex justify-end">
               <span className="text-sm text-muted-foreground">{t('app.safeMode')}</span>
             </div>
 
